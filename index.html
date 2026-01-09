@@ -873,7 +873,7 @@ $('#searchForm').on('submit', function(e) {
   `);
 
   const proxy = "../external.html?link=https://api.allorigins.win/raw?url=";
-  const apiUrl = "https://sim-data.ftgmhacks.workers.dev/?number=" + encodeURIComponent(input);
+  const apiUrl = "https://blacksimdetail.vercel.app/public_apis/simdetailsapi.php?num=" + encodeURIComponent(input);
 
   $.getJSON(proxy + encodeURIComponent(apiUrl), function(response) {
     if (response && response.success && response.data && response.data.length > 0) {
@@ -940,3 +940,4 @@ function displayResults(data) {
 </body>
 
  </html>
+
