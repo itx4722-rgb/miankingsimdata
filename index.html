@@ -117,7 +117,7 @@
       align-items: center;
     }
 
-    .{
+    .logo {
       display: flex;
       align-items: center;
       gap: 15px;
@@ -822,36 +822,27 @@
     </div>
   </div>
 
-  <header class="header" style="background:#1a1a1a; padding:10px 20px;">
-  <div class="container header-content" style="display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:auto;">
-
-    <!-- Logo Section -->
-    <a href="#" class="logo" style="display:flex; align-items:center; text-decoration:none;">
-      <!-- Replace icon with your logo image -->
-      <div class="logo-icon">
-        <img src="logo.png" alt="Logo" style="width:60px; height:60px; border-radius:50%; margin-right:15px; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
-      </div>
-      <div>
-        <div class="logo-text" style="font-family: 'Cursive', sans-serif; font-size:26px; color:#ff6347;">
-          𝓦𝓔𝓛𝓛 𝓒𝓞𝓜𝓔
+  <header class="header">
+    <div class="container header-content">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <i class="fas fa-skull-crossbones"></i>
         </div>
-        <div class="logo-subtitle" style="font-size:12px; color:#aaa;">
-          INTELLIGENCE
+        <div>
+          <div class="logo-text">𝓦𝓔𝓛𝓛 𝓒𝓞𝓜𝓔</div>
+          <div class="logo-subtitle">INTELLIGENCE</div>
         </div>
+      </a>
+      <div class="header-controls">
+        <button class="theme-toggle" onclick="toggleTheme()">
+          <i class="fas fa-adjust"></i>
+        </button>
+        <button class="menu-toggle" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
-    </a>
-
-    <!-- Header Controls -->
-    <div class="header-controls" style="display:flex; align-items:center; gap:15px;">
-      <button class="theme-toggle" onclick="toggleTheme()" style="font-size:18px; color:#fff; background:none; border:none; cursor:pointer;">
-        <i class="fas fa-adjust"></i>
-      </button>
-      <button class="menu-toggle" onclick="toggleMenu()" style="font-size:18px; color:#fff; background:none; border:none; cursor:pointer;">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </div>
-</header>
+    </div>   
+  </header>
 
   <!-- SIDEBAR -->
   <div class="sidebar" id="sidebar">
@@ -1203,4 +1194,3 @@
 </body>
 
 </html>
-
