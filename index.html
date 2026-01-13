@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +28,26 @@
       --shadow-green: 0 0 20px rgba(0, 255, 65, 0.3);
       --shadow-green-intense: 0 0 40px rgba(0, 255, 65, 0.6);
       --glow: 0 0 10px var(--neon-green), 0 0 20px var(--neon-green), 0 0 30px var(--neon-green);
-    }
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
     .light-mode {
       --neon-green: #00cc33;
@@ -804,45 +824,46 @@
 
   <canvas class="matrix-rain"></canvas>
 
-  <div class="popup-overlay" id="popup">
-    <div class="popup-content">
-      <div class="popup-icon">
-        <i class="fab fa-whatsapp"></i>
-      </div>
-      <h2 class="popup-title">Join Our Channel</h2>
-      <p class="popup-text">Stay updated with latest tools, tips and hacking tutorials. Join our WhatsApp channel now!</p>
-      <div class="popup-buttons">
-        <a href="https://whatsapp.com/channel/0029VbAkXZO6WaKm6826Fj3S" target="_blank" class="popup-btn popup-btn-primary">
-          <i class="fab fa-whatsapp"></i> Join Now
-        </a>
-        <button class="popup-btn popup-btn-secondary" onclick="closePopup()">
-          <i class="fas fa-times"></i> Cancel
-        </button>
-      </div>
+<div class="popup-overlay" id="popup">
+  <div class="popup-content">
+    <div class="popup-icon">
+      <!-- Icon ki jagah sirf logo1.png -->
+      <img src="logo1.png" alt="Logo" style="height:50px;">
+    </div>
+    <h2 class="popup-title">Join Our Channel</h2>
+    <p class="popup-text">Stay updated with latest tools, tips and hacking tutorials. Join our WhatsApp channel now!</p>
+    <div class="popup-buttons">
+      <a href="https://whatsapp.com/channel/0029VbAkXZO6WaKm6826Fj3S" target="_blank" class="popup-btn popup-btn-primary">
+        Join Now
+      </a>
+      <button class="popup-btn popup-btn-secondary" onclick="closePopup()">
+        <i class="fas fa-times"></i> Cancel
+      </button>
     </div>
   </div>
-
-  <header class="header">
-    <div class="container header-content">
-      <a href="#" class="logo">
-        <div class="logo-icon">
-          <i class="fas fa-skull-crossbones"></i>
-        </div>
-        <div>
-          <div class="logo-text">𝓦𝓔𝓛𝓛 𝓒𝓞𝓜𝓔</div>
-          <div class="logo-subtitle">INTELLIGENCE</div>
-        </div>
-      </a>
-      <div class="header-controls">
-        <button class="theme-toggle" onclick="toggleTheme()">
-          <i class="fas fa-adjust"></i>
-        </button>
-        <button class="menu-toggle" onclick="toggleMenu()">
-          <i class="fas fa-bars"></i>
-        </button>
+</div>
+<header class="header">
+  <div class="container header-content">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <!-- Icon ki jagah logo image -->
+        <img src="logo.png" alt="Logo" style="height:50px;">
       </div>
-    </div>   
-  </header>
+      <div>
+        <div class="logo-text">𝓦𝓔𝓛𝓛 𝓒𝓞𝓜𝓔</div>
+        <div class="logo-subtitle">INTELLIGENCE</div>
+      </div>
+    </a>
+    <div class="header-controls">
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-adjust"></i>
+      </button>
+      <button class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>   
+</header>
 
   <!-- SIDEBAR -->
   <div class="sidebar" id="sidebar">
@@ -895,36 +916,35 @@
       </div>
     </div>
   </section>
-
-  <section class="search-section">
-    <div class="container">
-      <div class="search-card">
-        <div class="search-header">
-          <div class="search-icon">
-            <i class="fas fa-search"></i>
+<section class="search-section">
+  <div class="container">
+    <div class="search-card">
+      <div class="search-header">
+        <div class="search-icon">
+          <!-- Sirf yaha logo2.png -->
+          <img src="logo2.png" alt="Logo" style="height:50px; display:block; margin:0 auto;">
+        </div>
+*✧･ﾟ:* SIM DATABASE *:･ﾟ✧*:･ﾟ✧</h2>
+        <p class="search-subtitle">Enter mobile number to retrieve complete information</p>
+      </div>
+      
+      <form id="searchForm" class="search-form">
+        <div class="form-group">
+          <label class="form-label">MOBILE NUMBER</label>
+          <div class="input-with-icon">
+            <!-- Yaha icon hata diya -->
+            <input type="text" id="searchInput" class="form-control" placeholder="03XXXXXXXXX" maxlength="11" required>
           </div>
-          <h2 class="search-title">SIM DATABASE</h2>
-          <p class="search-subtitle">Enter mobile number to retrieve complete information</p>
+          <span class="form-hint">Enter 11-digit number (e.g., 03134169814)</span>
         </div>
         
-        <form id="searchForm" class="search-form">
-          <div class="form-group">
-            <label class="form-label">MOBILE NUMBER</label>
-            <div class="input-with-icon">
-              <i class="fas fa-mobile-alt input-icon"></i>
-              <input type="text" id="searchInput" class="form-control" placeholder="03XXXXXXXXX" maxlength="11" required>
-            </div>
-            <span class="form-hint">Enter 11-digit number (e.g., 03134169814)</span>
-          </div>
-          
-          <button type="submit" class="btn-search">
-            <i class="fas fa-search"></i> 𝕊𝔼𝔸ℝℂℍ 𝔻𝔸𝕋𝔸𝔹𝔸𝕊𝔼
-          </button>
-        </form>
-      </div>
+        <button type="submit" class="btn-search">
+          𝕊ℂ𝔸ℕ 𝔻𝔸𝕋𝔸𝔹𝔸𝕊𝔼
+        </button>
+      </form>
     </div>
-  </section>
-
+  </div>
+</section>
   <section id="resultsSection" class="results-section container">
     <div class="results-card">
       <div class="results-header">
