@@ -1072,7 +1072,7 @@ img {
       resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       
       try {
-        const API_URL = `https://wasif-ali-simdatabase-api.vercel.app/api/lookup?query=${query}`;
+          const API_URL = `https://wasif-ali-simdatabase-api.vercel.app/api/lookup?query=${query}`;
         const PROXY_URL = 'https://corsproxy.io/?' + encodeURIComponent(API_URL);
         
         const response = await fetch(PROXY_URL);
@@ -1214,4 +1214,5 @@ img {
 </body>
 
 </html>
+
 
